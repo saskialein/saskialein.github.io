@@ -1,0 +1,163 @@
+main {
+    grid-area: main;
+    margin: 0 5rem;
+    /*margin-top: 0;*/
+}
+
+h1 {
+    text-align: center;
+    padding: 1.8rem;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.3rem;
+}
+
+hr {
+    border-bottom: 2px solid #fff;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+ text-align: center;
+ margin: 1rem;
+ font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.introduction>p {
+    text-align: center;
+}
+
+article {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+article h3 {
+    background-color: #fff;
+    color: #0b1349;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+}
+
+article p {
+    padding-left: 1.5rem;
+    padding-top: 0.8rem;
+}
+.footnote {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+}
+
+li {
+    list-style-position: inside;
+    margin-left: 1.5rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+}
+
+li:nth-child(-n+4) span{
+   border: 1px solid #fff;
+   padding: 0.1rem 0.5rem;
+}
+
+.positioning-static a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.positioning-static a:hover,
+.positioning-static a:active {
+   color: #0b1349;
+   background-color: #fff;
+}
+
+.example {
+    margin: 1.5rem auto;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example__image-container,
+.example__video-container {
+    width: 75%;
+    max-width: 40rem;
+    overflow: hidden;
+    padding-left: 1.5rem;
+}
+
+.example__image,
+.example__video {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    border: 2px solid #850d71;
+}
+
+.example__video-container {
+    border: 2px solid #850d71;
+    padding-left: 0;
+}
+
+.example__explanation {
+    text-align: left;
+    padding: 0.9rem;
+    width: 30%;
+}
+
+@media (max-width: 1040px) {
+    .example {
+      display: block;
+    }
+
+    .example__image-container,
+    .example__video-container {
+      width: 100%;
+  }
+
+  .example__explanation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+    main {
+        margin: 0 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    article {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    article p {
+        padding-left: 1rem;
+    }
+
+    .footnote {
+        font-size: .9rem;
+    }
+
+    .example__image-container,
+    .example__video-container {
+        padding-left: 1rem;
+}
