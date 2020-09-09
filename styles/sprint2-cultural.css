@@ -1,0 +1,46 @@
+main {
+    grid-area: main;
+    margin: 0 5rem;
+    /*margin-top: 0;*/
+}
+
+h1 {
+    text-align: center;
+    padding: 1.8rem;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.3rem;
+}
+
+hr {
+    border-bottom: 2px solid #fff;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+ text-align: center;
+ margin: 1rem;
+ font-size: 2rem;
+}
+
+blockquote {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+article {
+    margin: 2rem 10rem;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+article p {
+    padding-top: 1rem;
+}
