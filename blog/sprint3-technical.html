@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint3 - Technical</title>
+    <link rel="stylesheet" href="../styles/sprint3-technical.css">
+    <link rel="stylesheet" href="../styles/shared.css">
+</head>
+
+<body>
+    <a id="top"></a>
+    <header class="main-header">
+        <nav class="main-nav">
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="../index.html">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <main>
+        <section class="introduction">
+            <h1>Sprint 3 - Technical</h1>
+            <hr>
+            <h2> Introduction to JavaScript</h2>
+            
+            <article>
+                <h3>The differences between HTML & CSS</h3>
+                <p>When we are looking at a website, it is most likely that our browser will be receiving HTML and CSS from the web server that hosts the site. Small and/or static websites are often written just using HTML and CSS. 
+                    The web browser interprets the code of HTML and CSS to create a web page that we see.</p>
+                <p>But what exactly is HTML and CSS?</p>
+
+                <div class="example">
+                    <div class="example__explanation">
+                        <p>Imagine an amazing birthday cake with all sorts of edible decorative elements like icing, fondant figures, chocolate buttons, sprinkles, a cream layer in the middle of the cake, etc. </p>
+                        <p>To make this cake, we need to bake the plain cake base first, so we get the foundation and structure of our 'artwork'. 
+                           We could present and eat the plain cake, just as it comes out of the oven, but it would look very boring and taste a bit bland. That's not how we impress people, right?
+                           Okay, let's add some cool decoration to it which makes our cake look great and presentable. </p>
+                        <p>For web developers the plain cake is the HTML and the decoration is the CSS. The <span class="style-highlighted">HTML</span> gives the page it’s <span class="style-underline">structure</span> and contains it’s <span class="style-underline">content</span>. 
+                           The <span class="style-highlighted">CSS</span> adds <span class="style-underline">styling</span> to the page. It states, how the HTML content is presented (backgrounds, borders, colours, fonts, box dimensions, etc.).</p>
+                    </div>   
+                    <figure class="example__image-container">
+                        <img src="../images/unicorn-cupcake.jpg" alt="Showing a unicorn cupcake." class="example__image" id="unicorn">            
+                        <figcaption>Self-made unicorn cupcake</figcaption>
+                    </figure>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Explaining control flow and loops</h3>
+                <p>Control flow is the <span class="style-underline">order</span> in which the instructions, or statements are executed in a program. 
+                  Or in other words: The path that JavaScript takes when executing code. It usually reads the code starting from the first line until the last line 
+                  ( unless we have defined some instructions in the code that will change the control flow ).</p>
+                <p>I am coming back to my amazing birthday cake analogy to explain control flow in simple English: 
+                    Control flow is like following a recipe step by step in a logical order. We first turn on the oven to pre-heat, after that we weigh up all our ingredients and crack the eggs, then mix everything together in a bowl, 
+                    grease the cake tin, fill the batter into the cake tin, bake the cake, take the cake out of the oven when it is ready and let it cool down before taking it out of the tin.
+                    This is a logic order and it would be very silly if we swap these steps around.</p>
+                <p>The computer behaves in the same way by following the instructions of the code from start to beginning, step by step.</p>
+                <p>However, programmers often need to modify a program’s control flow. One example for how they can do that are <span class="style-highlighted">‘loops’</span>. 
+                    Loops are control flow statements that are used to do something <span class="style-underline">repeatedly</span>. Loops check a condition first and if the condition returns <span class="style-itallic">true</span>, the code block will run. 
+                    Then the condition will be checked again and if it still returns <span class="style-itallic">true</span>, the code block will run again. It repeats theses steps until the condition returns <span class="style-itallic">false</span>.</p>
+                <p>Because I have a really sweet tooth ( some might call it sugar addiction ) and I love baking so much, I am throwing in another sweet example:</p> 
+                <p>We are making an Italian meringue as a topping for a cake ( Not the birthday cake from before. This one is a fresh cake. ). A meringue is made, by whipping egg whites and tons of caster sugar together with an egg beater. 
+                    The result is a stiff but fluffy and sweet meringue mixture. Tastes a bit like a marshmallow but the texture is different. </p>
+                <p>The tricky part with the meringue making is, to know when we have got the right texture and need to stop mixing. If it is undermixed, it is soggy and will drench our cake. 
+                    If we mix it for too long, the mix turns into a grainy consistency. A perfect meringue is thick, so it forms peaks, and looks smooth and glossy.</p>
+                <p>In pseudocode it might look something like this:</p>
+                <figure class="example__image-container">
+                    <img src="../images/js-loops.png" alt="Pseudocode for a loop example" class="loop__image">            
+                    <figcaption>Pseudocode showing a loop example</figcaption>
+                </figure>
+            </article>
+         
+            <article>
+                <h3>The DOM</h3>
+                <p>DOM is the abbreviation for <span class="style-underline">'Document Object Model'</span>.</p>
+                <p>It helped me to understand what the DOM is, by first understanding of what the DOM is not.</p>
+                <p>The DOM is NOT the HTML code I write (the one I can see in the browser when I click on ‘View Source Code'.</p>
+                <p>Why? Because browsers are able to fix certain elements of our code or insert elements that are missing but required. 
+                   These elements will be there in the DOM, and we will be able to find them with JavaScript and style them with CSS, even though they are not in our HTML.</p>
+                <p>So, the DOM is NOT part of HTML but also not part of JavaScript. It is rather a separate set of rules which are implemented by all browsers.</p>
+                <p>The DOM has two main tasks:</p>
+                <p>&rarr;It specifies exactly how browsers should create a <span class="style-underline">model of an HTML page</span> and <span class="style-underline">how JavaScript can access and update the contents</span> of a web page while it appears in the browser window.</p>
+                <p>As a browser loads a web page, it creates a model of that page. This model is called a <span class="style-highlighted">DOM tree</span>, and it is stored in the browser’s memory.</p>
+                <p>The DOM is called object model because the model (the DOM tree) is made of <span class="style-underline">objects</span>. Each object represents a different part of the page loaded in the browser window.</p>
+                <p>The DOM also defines methods and properties to access and update each object in the model, which in turn updates what the user sees in the browser.</p>
+                <p>Let's climb the DOM tree to see how it is build:</p>
+                <div class="example">
+                    <figure class="example__image-container">
+                        <img src="../images/dom-tree.png" alt="The DOM tree" class="example__image">            
+                        <figcaption>The DOM tree</figcaption>
+                    </figure>
+                    <div class="example__explanation">
+                        <p>A DOM tree consists of <span class="style-underline">four main types of nodes</span>: The document node, element nodes, attribute nodes and text nodes. Each node is an object with methods and properties. 
+                            JavaScript code can access and update this DOM tree ( but it never changes the source HTML! ). Any changes that are made to the DOM-tree are reflected in the browser.</p>
+                        <ul>
+                            <li><span class="style-highlighted">The document node</span> is at the top of the tree. It represents the entire page and is the starting point to any visit to the DOM tree. That means: When we access any element, attribute or text node, we navigate to it via the document node.</li>
+                            <li><span class="style-highlighted">Element nodes</span> are the elements from our HTML code that describe the structure of an HTML page. ( e.g. &lt;h1&gt;, &lt;p&gt;, etc. )</li>
+                            <li><span class="style-highlighted">Attribute nodes</span> are attributes carried in the opening tags of HTML elements like classes and ID’s.</li>
+                            <li><span class="style-highlighted">Text nodes</span> are the texts within elements.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+           
+            <article>
+                <h3>Accessing data from arrays vs. Accessing data from objects</h3>
+                <h4>Arrays</h4>
+                <p>An array in JavaScript is a variable that stores a <span class="style-underline">list of values</span> which are related to each other. The values are assigned to the array in square brackets, 
+                    and each value is separated by a comma. The values don’t need to be from the same data type. It is okay to store strings, numbers and Booleans all in the same array.</p>
+                <p>Values in an array are accessed as if they are a numbered list which starts at zero and NOT at one. Each value in an array is automatically given a number called <span class="style-highlighted">index</span>.</p>
+                    <div class="example">
+                    <figure class="example__image-container">
+                        <img src="../images/js-arrays.png" alt="Example of a JavaScript array" class="example__image">            
+                        <figcaption>JavaScript Arrays</figcaption>
+                    </figure>
+                    <div class="example__explanation">
+                        <p>To find an item on the list, the array name has to be specified as well as the index number in square brackets.</p>
+                        <table>
+                            <tr>
+                                <th class="right-border">INDEX</th>
+                                <th>VALUE</th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>'milk'</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>'eggs'</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>'bread'</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>'bananas'</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>'tomatoes'</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Objects</h4>
+                <p>Objects group together a <span class="style-underline">combination of data</span> made out of <span class="style-underline">variables and functions</span>. 
+                    However, within an object <span class="style-underline">variables</span> become known as <span class="style-highlighted">properties</span> and <span class="style-underline">functions</span> become known as <span class="style-highlighted">methods</span>. 
+                    Properties tell us about the object, for example a cat ( as the object ), such as it’s name, age, breed, vaccinations, etc. 
+                    Like variables and functions, properties and methods have a name and a value. In an object, the <span class="style-underline">name</span> is called <span class="style-highlighted">key</span>. 
+                    An object can not have two keys with the same name because the keys are used to access their corresponding values. 
+                    The value is just called value and the data type doesn’t matter. It can be a string, a number or a Boolean, even an array or another object.</p>
+               <p>We can access the properties or methods of an object using <span class="style-underline">dot notation</span> or <span class="style-underline">square brackets</span>.</p>
+                <div class="example">
+                    <div class="example__explanation">
+                        <p><span class="style-highlighted">Dot notation:</span> To access a property or method we use the name of the object, followed by a period, then the name of the property or method we want to access.</p>
+                        <p><span class="style-highlighted">Square bracket syntax:</span> The object name is followed by square brackets, with the property or method inside them.</p>
+                        </div>
+                    <figure class="example__image-container">
+                        <img src="../images/js-objects.png" alt="Example of a JavaScript object" class="example__image">            
+                        <figcaption>JavaScript Objects</figcaption>
+                    </figure>
+                </div>
+            </article>
+           
+            <article>
+                <h3>Functions</h3>
+                <p>A function in JavaScript is a bunch of code or statements bundled together to perform a specific task. This bunch of code only runs when the function is called. That means that our script can ask the function to perform the task only when it is required. For example, we have a task that we only want to perform if the user clicks on a specific element in the page.</p>
+                <p>Functions also allow us, to organise our code into sections and to reuse code.</p>
+            </article>
+        </section>   
+    </main>
+
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__items">
+                <li class="main-footer__item">
+                    <p>German Engineering</p>
+                </li>
+                <li class="main-footer__item">
+                    <a href="#top">Jump to top of page</a>
+                </li>
+                <li class="main-footer__item">
+                    <p>&#9825; Made in Aotearoa &#9825;</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
