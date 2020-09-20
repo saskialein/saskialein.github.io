@@ -18,98 +18,171 @@
             </li>
           </ul>
         </nav>
-      </header>
+    </header>
 
     <main>
         <section class="introduction">
             <h1>Sprint 2 - Technical</h1>
             <hr>
             <h2> What are the differences between relative, absolute, and fixed positionings?</h2>
-            <p> I spent a while to understand the differences between absolute and relative positioning. My elements often seemed to be all over the place, so it was obvious to me to pick this topic and do some further research. Here is what I found out:</p>
+                <p> 
+                    I spent a while to understand the differences between absolute and relative positioning. My elements often seemed to be 
+                    all over the place, so it was obvious to me to pick this topic and do some further research. Here is what I found out:
+                </p>
             
             <article class="positioning-general">
                 <h3>The position property</h3>
-                <p>The position property helps us, to manipulate the location of an element. 
-                   Every element sits in a rectangular box and with positioning schemes you can define where a box will sit in the overall page layout and how each box affects the others around it.</p>
-                <p>The position property can take 6 values:</p>
-                <ul>
-                    <li><span>position: static</span></li>
-                    <li><span>position: relative</span></li>
-                    <li><span>position: absolute</span></li>
-                    <li><span>position: fixed</span></li>
-                    <li>position: inherit</li>
-                    <li>position: sticky</li>
-                </ul>
-                <p>I will cover the first 4 in more detail.</p>
+                    <p>
+                        The position property helps us, to manipulate the location of an element. 
+                        Every element sits in a rectangular box and with positioning schemes you can define where a box will sit in the 
+                        overall page layout and how each box affects the others around it.
+                    </p>
+                    <p>
+                        The position property can take 6 values:
+                    </p>
+                        <ul>
+                            <li><span>position: static</span></li>
+                            <li><span>position: relative</span></li>
+                            <li><span>position: absolute</span></li>
+                            <li><span>position: fixed</span></li>
+                            <li>position: inherit</li>
+                            <li>position: sticky</li>
+                        </ul>
+                    <p>I will cover the first 4 in more detail.</p>
             </article>
 
             <article class="positioning-static">
                 <h3>Position: static</h3>
-                <p>Every element has a static position by default. That means that it will stick to the normal page flow. The rules for where it sits and how it affects other boxes are defined by the <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank"> box model</a>.</p>  
-                <p>A statically positioned element will ignore any values for properties like top, right, bottom and left, as well as any z-index* declarations.</p>
-                <p>In order to use any of these properties your element must have absolute, relative or fixed positioning applied.</p>
-                <p class="footnote">* z-index: The 3rd dimension added to a page that sets the stack order of elements.</p>
-                <div class="example">
-                    <figure class="example__image-container">
-                        <img src="../images/position-static.png" alt="Showing a statically positioned element." class="example__image">            
-                        <figcaption>Fig. 1 - Positioning: static</figcaption>
-                    </figure>
-                    <div class="example__explanation">
-                        <p>You can see in the picture that we haven't set any position property. By default, the position is set to static and it positions based on the layout in the flow. I set the display property to inline-block, so the boxes align horizontally (they would align vertically otherwise). So, what happens when we want to move the pink box but do not want to affect the layout around it?</p>
+                    <p>
+                        Every element has a static position by default. That means that it will stick to the normal page flow. 
+                        The rules for where it sits and how it affects other boxes are defined by the 
+                        <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank"> box model</a>.
+                    </p>  
+                    <p>
+                        A statically positioned element will ignore any values for properties like top, right, bottom and left, 
+                        as well as any z-index* declarations.
+                    </p>
+                    <p>
+                        In order to use any of these properties your element must have absolute, relative or fixed positioning applied.
+                    </p>
+                    <p class="footnote">
+                        * z-index: The 3rd dimension added to a page that sets the stack order of elements.
+                    </p>
+                    <div class="example">
+                        <figure class="example__image-container">
+                            <img src="../images/position-static.png" alt="Showing a statically positioned element." class="example__image">            
+                            <figcaption>Fig. 1 - Positioning: static</figcaption>
+                        </figure>
+                        <div class="example__explanation">
+                            <p>
+                                You can see in the picture that we haven't set any position property. By default, the position is set to static 
+                                and it positions based on the layout in the flow. I set the display property to inline-block, so the boxes 
+                                align horizontally ( they would align vertically otherwise ). So, what happens when we want to move the 
+                                pink box but do not want to affect the layout around it?
+                            </p>
+                        </div>
                     </div>
-                </div>
             </article>
 
             <article class="positioning-relative">
                 <h3>Position: relative</h3>
-                <p>Just like with the static value, the element's original position remains in the flow of the docuemnt.</p>
-                <p>But now the values for left, right, top, bottom and z-index properties will actually work. With these properties set to certain values, you can shift the elements from where they would normally sit.</p>
-                <p>The elements around a relatively positioned element totally ignore this shift and stay in their original position as if the positioned element is still in the normal flow. Only the relatively positioned element moves around (like a ghost).</p>
-                <p>This allows elements to overlap each other.</p>
-                <div class="example">
-                    <figure class="example__image-container">
-                        <img src="../images/position-relative.png" alt="Showing a relatively positioned element." class="example__image">            
-                        <figcaption>Fig. 2 - Positioning: relative</figcaption>
-                    </figure>
-                    <div class="example__explanation">
-                        <p>Ok, what happens now when we want to move the pink box but do not want to affect the layout around it? <br> This is where position relative comes in. We have moved the pink pox 20px from the left and top without changing the layout around it. You can see, that the pink box is leaving a gap in it's old position.</p>
+                    <p>
+                        Just like with the static value, the element's original position remains in the flow of the docuemnt.
+                    </p>
+                    <p>
+                        But now the values for left, right, top, bottom and z-index properties will actually work. With these properties set to 
+                        certain values, you can shift the elements from where they would normally sit.
+                    </p>
+                    <p>
+                        The elements around a relatively positioned element totally ignore this shift and stay in their original position as if 
+                        the positioned element is still in the normal flow. Only the relatively positioned element moves around ( like a ghost ).
+                    </p>
+                    <p>
+                        This allows elements to overlap each other.
+                    </p>
+                    <div class="example">
+                        <figure class="example__image-container">
+                            <img src="../images/position-relative.png" alt="Showing a relatively positioned element." class="example__image">            
+                            <figcaption>Fig. 2 - Positioning: relative</figcaption>
+                        </figure>
+                        <div class="example__explanation">
+                            <p>
+                                Ok, what happens now when we want to move the pink box but do not want to affect the layout around it? 
+                                <br> This is where position relative comes in. We have moved the pink pox 20px from the left and top without changing 
+                                the layout around it. You can see, that the pink box is leaving a gap in it's old position.
+                            </p>
+                        </div>
                     </div>
-                </div>
             </article>
             
             <article class="positioning-absolute">
                 <h3>Position: absolute</h3>
-                <p>Absolutely positioned elements are completely removed from the normal document flow. The elements around absolutely positioned elements treat it as if it doesn't exist.</p>
-                <p>You can set the location of an absolutely positioned element through the top, right, bottom and left properties. However, you usually define only two of these (top or bottom and left or right).</p>
-                <p>The key to understanding absolute positioning is understanding where it's origin is. If you set the top property to 10px, you should ask yourself <br> "10px from the top from where?".</p>
-                <p>An absolutely positioned element is positioned relative to it's first parent element that has a position other than static applied.</p>
-                <p>If there is no such parent, it will default all the way back up to the '<html>' element itself. You can find it in the outermost edge of the browser window.</p>
-                <p>Again: When you set a position: absolute on an element, you should always have a look at it's parent element, too. If it also has positioning (other than static) applied, the origin for the the absolutely positioned elements is the top, left corner of the parent element. If all parent elements are static, look for the absolute positioned element at the top left corner of your browser window.</p>
-                <div class="example">
-                    <figure class="example__image-container">
-                        <img src="../images/position-absolute.png" alt="Showing a absolutely positioned element." class="example__image">            
-                        <figcaption>Fig. 3 - Positioning: absolute</figcaption>
-                    </figure>
-                    <div class="example__explanation">
-                        <p>By applying position: absolute to the pink box, it will jump out of the document flow without leaving any gap in it's old position. The other sibling elements behave as if the pink box isn't there. The position of the pink box is based on it's parent position (the black border) which is set to the relative value. Thus, moving 40px to the right and bottom from the top-left origin of the black border.</p>
+                    <p>
+                        Absolutely positioned elements are completely removed from the normal document flow. The elements around absolutely 
+                        positioned elements treat it as if it doesn't exist.
+                    </p>
+                    <p>
+                        You can set the location of an absolutely positioned element through the top, right, bottom and left properties. 
+                        However, you usually define only two of these ( top or bottom and left or right ).
+                    </p>
+                    <p>
+                        The key to understanding absolute positioning is understanding where it's origin is. If you set the top property to 10px, 
+                        you should ask yourself <br> "10px from the top from where?".
+                    </p>
+                    <p>
+                        An absolutely positioned element is positioned relative to it's first parent element that has a position other than static applied.
+                    </p>
+                    <p>
+                        If there is no such parent, it will default all the way back up to the '<html>' element itself. You can find it in the outermost 
+                        edge of the browser window.
+                    </p>
+                    <p>
+                        Again: When you set a position: absolute on an element, you should always have a look at it's parent element, too. If it also has 
+                        positioning ( other than static ) applied, the origin for the the absolutely positioned elements is the top, left corner of the 
+                        parent element. If all parent elements are static, look for the absolute positioned element at the top left corner of your 
+                        browser window.
+                    </p>
+                    <div class="example">
+                        <figure class="example__image-container">
+                            <img src="../images/position-absolute.png" alt="Showing a absolutely positioned element." class="example__image">            
+                            <figcaption>Fig. 3 - Positioning: absolute</figcaption>
+                        </figure>
+                        <div class="example__explanation">
+                            <p>
+                                By applying position: absolute to the pink box, it will jump out of the document flow without leaving any gap in 
+                                it's old position. The other sibling elements behave as if the pink box isn't there. The position of the pink box 
+                                is based on it's parent position ( the black border ) which is set to the relative value. Thus, moving 40px to the right 
+                                and bottom from the top-left origin of the black border.
+                            </p>
+                        </div>
                     </div>
-                </div>
             </article>
 
             <article class="positioning-fixed">
                 <h3>Position: fixed</h3>
-                <p>Position fixed is the easiest to explain. A position: fixed element will be stuck in place no matter how far the body extends. It is always positioned relative to the browser window (viewport) and takes the top, right, bottom and left properties. It is the rebel of all positioning properties and ignores it's parents.</p>
-                <p>The viewport doesn't change when the window is scrolled, so a fixed positioned element will stay where it is when the page is scrolled.</p>
-                <p>It is commonly used for the navigation bar and/or the footer.</p>
-                <div class="example">
-                    <video controls class="example__video-container">
-                       <source src="../images/positioning-fixed.mp4" type="video/mp4" class="example__video">            
-                        <p>Fig. 3 - Positioning: fixed</p>
-                    </video>
-                    <div class="example__explanation">
-                        <p>You can see in the short video, that the pink box stays in it's position while the page is scrolled.</p>
+                    <p>
+                        Position fixed is the easiest to explain. A position: fixed element will be stuck in place no matter how far the body 
+                        extends. It is always positioned relative to the browser window ( viewport ) and takes the top, right, bottom and left 
+                        properties. It is the rebel of all positioning properties and ignores it's parents.
+                    </p>
+                    <p>
+                        The viewport doesn't change when the window is scrolled, so a fixed positioned element will stay where it is when 
+                        the page is scrolled.
+                    </p>
+                    <p>
+                        It is commonly used for the navigation bar and/or the footer.
+                    </p>
+                    <div class="example">
+                        <video controls class="example__video-container">
+                        <source src="../images/positioning-fixed.mp4" type="video/mp4" class="example__video">            
+                            <p>Fig. 3 - Positioning: fixed</p>
+                        </video>
+                        <div class="example__explanation">
+                            <p>
+                                You can see in the short video, that the pink box stays in it's position while the page is scrolled.
+                            </p>
+                        </div>
                     </div>
-                </div>
             </article>
         </section>   
     </main>
