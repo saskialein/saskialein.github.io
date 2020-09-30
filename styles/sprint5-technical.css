@@ -28,6 +28,11 @@ h3 {
     font-size: 1.5rem;
 }
 
+h4 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
 article h3 {
     background-color: #FFF;
     color: #0b1349;
@@ -70,21 +75,15 @@ figcaption {
     width: 100%;
     height: auto;
     vertical-align: top;
-    border: 2px solid #850d71;
+    border: 2px dotted #850d71;
 }
 
-.small-image {
-    margin-top: 1rem;
-    width: 65%;
-    height: auto;
-    display: block;
-    border: 2px solid #850d71;
-}
 
 .example__explanation {
     text-align: left;
     padding-left: 2rem;
     width: 60%;
+    padding-top: 0;
 }
 .list-style {
     margin: 1rem 2rem;
@@ -116,6 +115,21 @@ li p {
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     margin: 0.2rem 0;
+}
+
+@media (max-width: 960px) {
+    .example {
+      display: block;
+    }
+
+    .example__image-container {
+      width: 100%;
+  }
+
+  .example__explanation {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 560px) {

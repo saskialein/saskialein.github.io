@@ -1,0 +1,134 @@
+main {
+    grid-area: main;
+    margin: 0 5rem;
+    /*margin-top: 0;*/
+}
+
+h1 {
+    text-align: center;
+    padding: 1.8rem;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.3rem;
+}
+
+.title-separator {
+    border-bottom: 2px solid #fff;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+ text-align: center;
+ margin: 1rem;
+ font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+/*.heading-borders {
+    border: 3px solid #850d71;
+    padding: 0.2rem 0.4rem;
+}*/
+
+.question-separator {
+    border-bottom: 3.5px solid #850d71;
+    width: 85%;
+    margin: 0 auto;
+}
+
+article {
+    margin: 2rem 10rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+article > p {
+    padding-top: 1rem;
+}
+
+li {
+    list-style-position: inside;
+    margin-left: 1.5rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    padding-top: 0.5rem;
+  }
+
+  ol li {
+    counter-increment: my-awesome-counter;
+    padding-top: 0.3rem;
+  }
+
+  ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.subtitle {
+    padding-top: 1rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media (max-width: 960px) {
+    main {
+        margin: 0 3rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 0.8rem;
+    } 
+    
+    article {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    article p {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 685px) {
+    main {
+        margin: 0 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+    
+    article {
+        font-size: 1rem;
+    }
+}
