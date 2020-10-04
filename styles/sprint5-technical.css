@@ -1,7 +1,6 @@
 main {
     grid-area: main;
     margin: 0 8rem;
-    /*margin-top: 0;*/
 }
 
 h1 {
@@ -78,30 +77,11 @@ figcaption {
     border: 2px dotted #850d71;
 }
 
-
 .example__explanation {
     text-align: left;
     padding-left: 2rem;
     width: 60%;
     padding-top: 0;
-}
-.list-style {
-    margin: 1rem 2rem;
-}
-
-.list-style > li {
-    padding-top: 0.5rem;
-    padding-bottom: 0.4rem;
-}
-
-li {
-    list-style-position: inside;
-    margin-left: 1.5rem;
-}
-
-li p {
-    margin-left: 0.5rem;
-    margin-top: 0;
 }
 
 .style-underline {
@@ -118,25 +98,28 @@ li p {
 }
 
 @media (max-width: 960px) {
-    .example {
-      display: block;
-    }
-
-    .example__image-container {
-      width: 100%;
-  }
-
-  .example__explanation {
-    width: 100%;
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 560px) {
     main {
         margin: 0 2rem;
     }
     
+    .example {
+      display: block;
+      padding: 0 2rem;
+    }
+
+    .example__image-container {
+      width: 100%;
+      padding: 0;
+  }
+
+    .example__explanation {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
     h1 {
         font-size: 2rem;
     }
@@ -153,9 +136,5 @@ li p {
     article {
         font-size: 1rem;
         margin: 1rem 0;
-    }
-
-    article p {
-        padding-left: 1rem;
     }
 }

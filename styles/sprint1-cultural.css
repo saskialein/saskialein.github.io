@@ -1,7 +1,6 @@
 main {
     grid-area: main;
-    margin: 0 5rem;
-    /*margin-top: 0;*/
+    margin: 0 4rem;
 }
 
 h1 {
@@ -32,11 +31,14 @@ blockquote {
 
 .quote {
     font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
+    color: #850d71;
 }
 
 article {
-    margin: 2rem 10rem;
+    margin: 2rem 8rem;
     font-size: 1.5rem;
     text-align: justify;
 }
@@ -45,15 +47,16 @@ article p {
     padding-top: 1rem;
 }
 
-.bold-parts {
-    font-weight: bold;
+.bold-part-title {
     text-decoration: underline;
+    font-weight: bold;
 }
 
-/*li {
-    padding: 0.8rem 0;
-    list-style-position: inside;
-}*/
+.bold-parts {
+    font-weight: bold;
+    /*text-decoration: underline;*/
+    border-bottom: 2px solid #850d71;
+}
 
 ol {
     list-style: none;
@@ -67,9 +70,47 @@ ol {
 
   ol li::before {
     content: counter(my-awesome-counter) ". ";
-    color: #fff;
+    color:  #850d71;
     font-weight: bold;
     font-size: 1.5rem;
     font-family: 'Permanent Marker', cursive;
 }
-  
+
+@media (max-width: 960px) {
+    main {
+        margin: 0 1rem;
+    }
+
+    article {
+        font-size: 1.3rem;
+        margin: 1.5rem 5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .quote {
+        font-size: 1.2rem;
+    }
+
+    article {
+        font-size: 1.1rem;
+        margin: 1rem 2rem;
+    }
+
+    ol li::before {
+        font-size: 1.2rem;
+    }
+}
